@@ -45,8 +45,8 @@ Extra, FIX for 4K 144hz/165hz
 
 ## Screenshots
 
-![App Screenshot](https://raw.githubusercontent.com/balu100/dolby-vision-for-windows/main/app.png)
-![Display Settings Screenshot](https://raw.githubusercontent.com/balu100/dolby-vision-for-windows/main/displaysettings.png)
+![App Screenshot](https://github.com/Team-D4RK/dolby-vision-for-windows/main/app.png)
+![Display Settings Screenshot](https://github.com/Team-D4RK/dolby-vision-for-windows/blob/main/displaysettings.png)
 
 ## Acknowledgements
 
