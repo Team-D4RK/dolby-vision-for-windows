@@ -8,11 +8,11 @@ Welcome to the DVFW GitHub repository by Team D4RK! This project aims to help us
 Follow these steps to enable Dolby Vision on your PC:
 
 ### Prerequisites
-1. Dolby Access: https://apps.microsoft.com/detail/9n0866fs04w8?hl=en-US&gl=US
-2. Dolby Vision Extensions: https://www.microsoft.com/en-gb/p/dolby-vision-extensions/9pltg1lwphlf
-3. HEVC Video Extensions:https://apps.microsoft.com/detail/9NMZLZ57R3T7?hl=en-US&gl=US
-4. CRU: https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU
-5. AW EDID Editor: https://www.analogway.com/emea/products/software-tools/aw-edid-editor/
+1. [Dolby Access](https://apps.microsoft.com/detail/9n0866fs04w8?hl=en-US&gl=US)
+2. [Dolby Vision Extensions](https://www.microsoft.com/en-gb/p/dolby-vision-extensions/9pltg1lwphlf)
+3. [HEVC Video Extensions](https://apps.microsoft.com/detail/9NMZLZ57R3T7?hl=en-US&gl=US)
+4. [CRU](https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU)
+5. [AW EDID Editor](https://www.analogway.com/emea/products/software-tools/aw-edid-editor/)
 
 ### Steps
 1. Download and install all prerequisites.
@@ -42,3 +42,13 @@ Extra, FIX for 4K 144hz/165hz
 6. Click Add... and select Timing: CVT-RB2 standard
 7. Enter Active: 3840x2160 and Refresh rate 144.000 or 165.000 and click ALL OK button
 8. Run Restart64.exe or Restart.exe found in the CRU folder to apply the changes.
+
+## Screenshots
+
+![App Screenshot](https://raw.githubusercontent.com/balu100/dolby-vision-for-windows/main/app.png)
+![Display Settings Screenshot](https://raw.githubusercontent.com/balu100/dolby-vision-for-windows/main/displaysettings.png)
+
+## Acknowledgements
+
+- Special thanks to dogelitionhttps://linustechtips.com/topic/1145733-get-dolby-vision-instead-of-hdr10-on-windows-10/?do=findComment&comment=16314256for the initial guide.
+- Special thanks to balu100 for the second guide.
