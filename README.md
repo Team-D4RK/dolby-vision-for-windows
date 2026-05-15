@@ -14,7 +14,7 @@ Follow these steps to enable Dolby Vision on your PC:
 4. [CRU](https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU)
 5. [AW EDID Editor](https://www.analogway.com/emea/products/software-tools/aw-edid-editor/)
 
-#### Steps
+### Steps
 1. Download and install all prerequisites.
 2. Open CRU.
 3. Select your display from the dropdown menu.
@@ -33,7 +33,7 @@ Follow these steps to enable Dolby Vision on your PC:
 12. Return in CRU again and Import the edited EDID file (fixeddolbyvisionmonitor.bin).
 13. Run Restart64.exe or Restart.exe found in the CRU folder to apply the changes.
 
-##### Extra, FIX for 4K 144hz/165hz
+### Extra, FIX for 4K 144hz/165hz
 1. Open CRU.
 2. Select your display from the dropdown menu.
 3. Go into Extension blocks and click Add...
@@ -43,7 +43,7 @@ Follow these steps to enable Dolby Vision on your PC:
 7. Enter Active: 3840x2160 and Refresh rate 144.000 or 165.000 and click ALL OK button
 8. Run Restart64.exe or Restart.exe found in the CRU folder to apply the changes.
 
-###### Screenshots
+## Screenshots
 
 ![App Screenshot](https://github.com/Team-D4RK/dolby-vision-for-windows/blob/main/app.png)
 ![Display Settings Screenshot](https://github.com/Team-D4RK/dolby-vision-for-windows/blob/main/displaysettings.png)
