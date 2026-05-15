@@ -48,7 +48,7 @@ Follow these steps to enable Dolby Vision on your PC:
 ![App Screenshot](https://github.com/Team-D4RK/dolby-vision-for-windows/blob/main/app.png)
 ![Display Settings Screenshot](https://github.com/Team-D4RK/dolby-vision-for-windows/blob/main/displaysettings.png)
 
-####### Acknowledgements
+## Acknowledgements
 
 - Special thanks to dogelitionhttps://linustechtips.com/topic/1145733-get-dolby-vision-instead-of-hdr10-on-windows-10/?do=findComment&comment=16314256for the initial guide.
 - Special thanks to balu100 for the second guide.
