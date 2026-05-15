@@ -8,11 +8,11 @@ Welcome to the DVFW GitHub repository by Team D4RK! This project aims to help us
 Follow these steps to enable Dolby Vision on your PC:
 
 ### Prerequisites
-Dolby Access: https://apps.microsoft.com/detail/9n0866fs04w8?hl=en-US&gl=US
-Dolby Vision Extensions: https://www.microsoft.com/en-gb/p/dolby-vision-extensions/9pltg1lwphlf
-HEVC Video Extensions:https://apps.microsoft.com/detail/9NMZLZ57R3T7?hl=en-US&gl=US
-CRU: https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU
-AW EDID Editor: https://www.analogway.com/emea/products/software-tools/aw-edid-editor/
+1. Dolby Access: https://apps.microsoft.com/detail/9n0866fs04w8?hl=en-US&gl=US
+2. Dolby Vision Extensions: https://www.microsoft.com/en-gb/p/dolby-vision-extensions/9pltg1lwphlf
+3. HEVC Video Extensions:https://apps.microsoft.com/detail/9NMZLZ57R3T7?hl=en-US&gl=US
+4. CRU: https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU
+5. AW EDID Editor: https://www.analogway.com/emea/products/software-tools/aw-edid-editor/
 
 ### Steps
 1. Download and install all prerequisites.
