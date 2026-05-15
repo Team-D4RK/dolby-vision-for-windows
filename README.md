@@ -1,23 +1,6 @@
-# DVFW (Dolby Vision For Windows)
+# DVFW (Dolby Vision For Windows) Forked
 
-Welcome to the DVFW GitHub repository! This project aims to help users get Dolby Vision working on PCs. Contributions are welcome to improve and refine the process.
-
-## Updates
-
-### Latest
-- 2026-04-01 VSVDB v1 has been unreliable in testing, while VSVDB v2 has worked much more consistently. Right now, the Windows Dolby Vision toggle does not seem to work for us, but I am still tracking it for testing here: [issue #17](https://github.com/balu100/dolby-vision-for-windows/issues/17). The same goes for the VSVDB v1 issue, which I am tracking here: [issue #45](https://github.com/balu100/dolby-vision-for-windows/issues/45). I also made a web tool that can inspect Dolby VSVDB/CTA data and apply the same changes as the Python script: https://dvfw.netlify.app/
-
-<details>
-<summary>Older updates</summary>
-
-- 2025.03.30 - Waiting for the new "Use Dolby Vision Mode" setting in the latest Windows 11 Insider Dev build. If it drops, I'll be sure to update the guide.
-
-- 2025.03.31 - KB5053656 - [Display kernel] Fixed: This update addresses an issue affecting High Dynamic Range (HDR) content playback on Dolby Vision capable displays, where users might see regular HDR instead of Dolby Vision, missing specific content indicators.
-
-- 2025.04.03 [Windows Insider - Use Dolby Vision Mode](https://github.com/balu100/dolby-vision-for-windows/issues/17)
-
-- 2025.09.18 The only TV currently reported as working system-wide with Dolby Vision is the LG C3 [source](https://github.com/balu100/dolby-vision-for-windows/issues/24)
-</details>
+Welcome to the DVFW GitHub repository by Team D4RK! This project aims to help users get Dolby Vision working on PCs. Contributions are welcome to improve and refine the process.
 
 
 ## Current Best Known Guide
@@ -25,44 +8,37 @@ Welcome to the DVFW GitHub repository! This project aims to help users get Dolby
 Follow these steps to enable Dolby Vision on your PC:
 
 ### Prerequisites
-
-1. Download and install [Dolby Vision Extensions](https://www.microsoft.com/en-gb/p/dolby-vision-extensions/9pltg1lwphlf) and [HEVC Video Extensions](https://apps.microsoft.com/detail/9NMZLZ57R3T7?hl=en-US&gl=US).
+Dolby Access: https://apps.microsoft.com/detail/9n0866fs04w8?hl=en-US&gl=US
+Dolby Vision Extensions: https://www.microsoft.com/en-gb/p/dolby-vision-extensions/9pltg1lwphlf
+HEVC Video Extensions:https://apps.microsoft.com/detail/9NMZLZ57R3T7?hl=en-US&gl=US
+CRU: https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU
+AW EDID Editor: https://www.analogway.com/emea/products/software-tools/aw-edid-editor/
 
 ### Steps
-
-1. Download [Custom Resolution Utility (CRU)](https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU).
+1. Download and install all prerequisites.
 2. Open CRU.
 3. Select your display from the dropdown menu.
-4. Export the current EDID to a file (e.g., `dolbyvisionmonitor.bin`).
-5. Download [AW EDID Editor](https://www.analogway.com/emea/products/software-tools/aw-edid-editor/).
+4. Export the current EDID to a file (e.g., dolbyvisionmonitor.bin).
+5. Download AW EDID Editor.
 6. Open AW EDID Editor.
-7. Open the exported EDID file (`dolbyvisionmonitor.bin`).
+7. Open the exported EDID file (dolbyvisionmonitor.bin).
 8. Under CEA Extension, navigate to the Vendor-Specific Video section with a matching "IEEE OUI" of 53318, this is the Dolby OUI.
-    * if you can't find a Vendor-Specific Video section with a matching IEEE OUI value, it may be the case that your display does not support Dolby Vision
-9. Edit the Payload (HEX String).
-    1. Below are some known, pre-computed (`original` -> `updated`) values:
-        * `480376825e6d95` -> `480377825e6d95` (LG C1)
-        * `480a7e86607694` -> `480a7f86607694` (LG C2)
-        * `480a6e845a6d94` -> `480a6f845a6d94` (LG B2)
-        * `4d4e4a725a7776` -> `4d4e4b725a7776` (TCL C825)
-        * `48039e5898aa5c` -> `48039f5898aa5c` (Sony A95L)
-        * `4403609248458f` -> `4403619248458f` (unknown model of Sony Bravia)
-    1. If your hex string is not listed above, then compute it via:
-        ```shell
-        python.exe enable_dolby_vision_hdmi.py __HEX_STRING__
-        ```
-    1. (If you want to dive deeper into the hex string config, consult [dolby_vsvdb_calc.xlsm](./dolby_vsvdb_calc.xlsm) from [here](https://discourse.coreelec.org/t/edid-override-injecting-a-dolby-vsvdb-block/51510?page=1)).
-10. Save the edited EDID as a new file (e.g., `fixeddolbyvisionmonitor.bin`).
-11. Open CRU again.
-12. Import the edited EDID file (`fixeddolbyvisionmonitor.bin`).
-13. Run `Restart64.exe` or `Restart.exe` found in the CRU folder to apply the changes.
 
-## Screenshots
+ - if you can't find a Vendor-Specific Video section with a matching IEEE OUI value, it may be the case that your display does not support Dolby Vision
 
-![App Screenshot](https://raw.githubusercontent.com/balu100/dolby-vision-for-windows/main/app.png)
-![Display Settings Screenshot](https://raw.githubusercontent.com/balu100/dolby-vision-for-windows/main/displaysettings.png)
+9. Copy the Payload (HEX String).
+10. Go here https://dvfw.netlify.app/ and paste your Payload (HEX String).
+11. Click on Decode and click Enable Dolby Vision Mode (Enable LLDV-HDMI (v2) or other (Check Action Output Section))
+12. Return in AW EDID Editor and paste the new Payload (HEX String) and save edited EDID file (e.g., fixeddolbyvisionmonitor.bin)
+12. Return in CRU again and Import the edited EDID file (fixeddolbyvisionmonitor.bin).
+13. Run Restart64.exe or Restart.exe found in the CRU folder to apply the changes.
 
-## Acknowledgements
-
-- Special thanks to [dogelition](https://linustechtips.com/topic/1145733-get-dolby-vision-instead-of-hdr10-on-windows-10/?do=findComment&comment=16314256) for the initial guide.
-- Thanks to [djnice](https://github.com/balu100/dolby-vision-for-windows/issues/1) for the VSVDB Calc tool.
+Extra, FIX for 4K 144hz/165hz
+1. Open CRU.
+2. Select your display from the dropdown menu.
+3. Go into Extension blocks and click Add...
+4. Select Type: DisplayID 2.0 and click Add...
+5. Select Detailed resolutions and click OK
+6. Click Add... and select Timing: CVT-RB2 standard
+7. Enter Active: 3840x2160 and Refresh rate 144.000 or 165.000 and click ALL OK button
+8. Run Restart64.exe or Restart.exe found in the CRU folder to apply the changes.
