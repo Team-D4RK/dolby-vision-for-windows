@@ -1,4 +1,4 @@
-# DVFW (Dolby Vision For Windows) Forked
+# DVFW (Dolby Vision For Windows) Forked by D4RK Le4D3Rz
 
 Welcome to the DVFW GitHub repository by Team D4RK! This project aims to help users get Dolby Vision working on PCs. Contributions are welcome to improve and refine the process.
 
