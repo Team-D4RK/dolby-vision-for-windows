@@ -33,7 +33,7 @@ Follow these steps to enable Dolby Vision on your PC:
 12. Return in CRU again and Import the edited EDID file (fixeddolbyvisionmonitor.bin).
 13. Run Restart64.exe or Restart.exe found in the CRU folder to apply the changes.
 
-### Extra, FIX for 4K 144hz/165hz
+### FIX for 4K 144hz/165hz
 1. Open CRU.
 2. Select your display from the dropdown menu.
 3. Go into Extension blocks and click Add...
