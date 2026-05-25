@@ -1,6 +1,6 @@
 # DVFW (Dolby Vision For Windows) - Forked by Team D4RK
 
-Welcome to the DVFW GitHub repository by Team D4RK! This project aims to help users get Dolby Vision working on PCs. Contributions are welcome to improve and refine the process.
+Welcome to the DVFW GitHub repository by Team D4RK! This project aims to help users get Dolby Vision working on PCs. 
 
 
 ## Current Best Known Guide
@@ -33,7 +33,7 @@ Follow these steps to enable Dolby Vision on your PC:
 12. Return in CRU again and Import the edited EDID file (fixeddolbyvisionmonitor.bin).
 13. Run Restart64.exe or Restart.exe found in the CRU folder to apply the changes.
 
-### FIX for 4K 144hz/165hz
+## FIX for 4K 144hz/165hz
 1. Open CRU.
 2. Select your display from the dropdown menu.
 3. Go into Extension blocks and click Add...
@@ -42,6 +42,37 @@ Follow these steps to enable Dolby Vision on your PC:
 6. Click Add... and select Timing: CVT-RB2 standard
 7. Enter Active: 3840x2160 and Refresh rate 144.000 or 165.000 and click ALL OK button
 8. Run Restart64.exe or Restart.exe found in the CRU folder to apply the changes.
+
+## FIX for NITS limit
+### 1. Change nits limit
+1. Open CRU.
+2. Select your display from the dropdown menu.
+3. Go into Extension blocks and edit CTA-861
+4. In Data blocks edit HDR static metadata
+5. Under HDR static metadata. Change value for Max luminance and Max frame-avg
+-  (Put your real Screen NITS limit for this check bellow Step 2 (HDR calibration))
+6. After change. Click ALL OK button and Run Restart64.exe or Restart.exe found in the CRU folder to apply the changes.
+
+### 2. Calibrate Using the Windows HDR Calibration App
+After applying your target value in CRU and running `restart64.exe` to refresh your graphics drivers:
+
+1. Launch the official **Windows HDR Calibration** app (available for free on the Microsoft Store).
+2. Follow the on-screen instructions until you reach the white pattern test screens.
+3. Adjust the sliders until the textured pattern disappears completely. 
+4. The pattern should become invisible exactly when the app's digital readout matches your display's target nits value (e.g., 800, 1000, 5000, etc.).
+
+| Luminosité cible (Nits) | Valeur exacte CRU (Code Value) | Équivalent réel calculé | Type d'écran courant |
+| :--- | :--- | :--- | :--- |
+| **400 nits** | **96** | 400 nits | Écrans PC entrée de gamme (HDR 400) |
+| **600 nits** | **115** | 603 nits | Moniteurs IPS/VA certifiés HDR 600 |
+| **800 nits** | **128** | 800 nits | Écrans OLED classiques (LG C1/C2/C3, ASUS, MSI) |
+| **1 000 nits** | **139** | 1 015 nits | OLED récents (QD-OLED Gen 3, LG G4) / Mini-LED |
+| **1 300 nits** | **151** | 1 310 nits | Écrans OLED haut de gamme (mode Peak Highlighter) |
+| **1 500 nits** | **157** | 1 542 nits | TV Mini-LED intermédiaires (Samsung QN90, Sony) |
+| **2 000 nits** | **170** | 2 000 nits | TV Mini-LED très lumineuses (TCL C805/C845) |
+| **3 000 nits** | **193** | 3 044 nits | TV Mini-LED Premium (Samsung QN95, Hisense U8) |
+| **4 000 nits** | **205** | 4 063 nits | Écrans de référence de mastering (Dolby Vision) |
+| **5 000 nits** | **213** | 5 042 nits | TV Extrêmes (Hisense 75U88QG, TCL X955) |
 
 ## Screenshots
 
